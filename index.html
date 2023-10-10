@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API local</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>API Integration</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Enviar Dados (POST)</h2>
+            <form id="postDataForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required><br>
+                <label for="accountNumber">Número da Conta:</label>
+                <input type="text" id="accountNumber" required><br>
+                <label for="agency">Agência:</label>
+                <input type="text" id="agency" required><br>
+                <label for="balance">Saldo:</label>
+                <input type="number" id="balance" required><br>
+                <label for="limit">Limite:</label>
+                <input type="number" id="limit" required><br>
+                <label for="cardNumber">Número do Cartão:</label>
+                <input type="text" id="cardNumber" required><br>
+                <label for="cardLimit">Limite do Cartão:</label>
+                <input type="number" id="cardLimit" required><br>
+                <button type="button" id="sendPostData">Enviar Dados (POST)</button>
+            </form>
+            <div id="postSuccessMessage" class="success-message"></div>
+        </section>
+
+        <section class="data-section">
+            <h2>Buscar Dados (GET)</h2>
+            <button type="button" id="fetchData">Buscar Dados (GET)</button>
+        </section>
+
+        <section class="formatted-data-section">
+            <h2>Dados Formatados</h2>
+            <div id="formattedData">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Número da Conta</th>
+                                <th>Agência</th>
+                                <th>Saldo</th>
+                                <th>Limite</th>
+                                <th>Número do Cartão</th>
+                                <th>Limite do Cartão</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="update-section">
+            <h2>Atualizar Usuário (PATCH)</h2>
+            <form id="patchDataForm">
+                <label for="patchUserId">ID do Usuário:</label>
+                <input type="number" id="patchUserId" required><br>
+                <label for="patchUserName">Novo Nome:</label>
+                <input type="text" id="patchUserName"><br>
+                <label for="patchAccountNumber">Novo Número da Conta:</label>
+                <input type="text" id="patchAccountNumber"><br>
+                <label for="patchAgency">Nova Agência:</label>
+                <input type="text" id="patchAgency"><br>
+                <label for="patchBalance">Novo Saldo:</label>
+                <input type="number" id="patchBalance"><br>
+                <label for="patchLimit">Novo Limite:</label>
+                <input type="number" id="patchLimit"><br>
+                <label for="patchCardNumber">Novo Número do Cartão:</label>
+                <input type="text" id="patchCardNumber"><br>
+                <label for="patchCardLimit">Novo Limite do Cartão:</label>
+                <input type="number" id="patchCardLimit"><br>
+                <button type="button" id="sendPatchData">Atualizar Usuário (PATCH)</button>
+            </form>
+            <div id="patchResult"></div>
+        </section>
+
+        <section class="delete-section">
+            <h2>Excluir Usuário (DELETE)</h2>
+            <form id="deleteDataForm">
+                <label for="deleteUserId">ID do Usuário:</label>
+                <input type="number" id="deleteUserId" required><br>
+                <button type="button" id="sendDeleteData">Excluir Usuário (DELETE)</button>
+            </form>
+            <div id="deleteResult"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
