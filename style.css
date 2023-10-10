@@ -91,16 +91,27 @@ tr:hover {
 
 @media (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 20px;
     }
 
     form {
         padding: 10px;
+        text-align: center;
     }
 
     input {
-        width: 100%;
+        width: 90%;
     }
+
+    .data-section{
+        text-align: center;
+    }
+
+
+    .form-section h2, .delete-section h2,  .formatted-data-section h2 {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 480px) {
